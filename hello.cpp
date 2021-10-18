@@ -4,25 +4,19 @@ using namespace std;
 
 int main()
 {
-    int w;
-
-std:
-    cin >> w;
-    if (w % 2 == 0)
+    int n;
+    string s;
+    cin >> n;
+    for (int count = 0; count < n; ++count)
     {
-        if (w == 2)
+    std:
+        cin >> s;
+        if (s.length() >= 11)
         {
-            std::cout << "NO";
+            string length = to_string(s.length() - 2);
+            s.replace(1, s.length() - 2, length);
         }
-        else
-        {
-            std::cout << "YES";
-        }
+        cout << s << std::endl;
     }
-    else
-    {
-        std::cout << "NO";
-    }
-
     return 0;
 }
